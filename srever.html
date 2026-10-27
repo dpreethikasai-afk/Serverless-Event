@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration System</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            color: #333;
+        }
+
+        header {
+            background: #4338ca;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background: #312e81;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .event {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #00000015;
+        }
+
+        .event h2 {
+            color: #4338ca;
+            margin-bottom: 10px;
+        }
+
+        .event p {
+            margin: 8px 0;
+        }
+
+        .registration {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #00000015;
+        }
+
+        .registration h2 {
+            text-align: center;
+            color: #4338ca;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 22px;
+            background: #4338ca;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #312e81;
+        }
+
+        footer {
+            background: #312e81;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 12px;
+            }
+
+            nav a {
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Event Registration System</h1>
+        <p>Register for exciting events and workshops</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#register">Register</a>
+    </nav>
+
+    <div class="container" id="home">
+
+        <section id="events">
+            <div class="event">
+                <h2>Web Development Workshop</h2>
+                <p>Learn HTML, CSS and website development.</p>
+                <p><strong>Date:</strong> 15 November 2026</p>
+                <p><strong>Mode:</strong> Online</p>
+            </div>
+
+            <div class="event">
+                <h2>AI and Cloud Computing Seminar</h2>
+                <p>Explore Artificial Intelligence and cloud technologies.</p>
+                <p><strong>Date:</strong> 20 November 2026</p>
+                <p><strong>Mode:</strong> Offline</p>
+            </div>
+        </section>
+
+        <section class="registration" id="register">
+            <h2>Registration Form</h2>
+
+            <form action="#" method="post">
+
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Enter your full name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter your email" required>
+
+                <label for="college">College Name</label>
+                <input type="text" id="college" name="college"
+                       placeholder="Enter your college name" required>
+
+                <label for="department">Department</label>
+                <select id="department" name="department" required>
+                    <option value="">Select department</option>
+                    <option value="CSE">Computer Science</option>
+                    <option value="AIDS">AI and Data Science</option>
+                    <option value="ECE">Electronics and Communication</option>
+                    <option value="IT">Information Technology</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="event">Select Event</label>
+                <select id="event" name="event" required>
+                    <option value="">Choose an event</option>
+                    <option value="Web Development Workshop">
+                        Web Development Workshop
+                    </option>
+                    <option value="AI and Cloud Computing Seminar">
+                        AI and Cloud Computing Seminar
+                    </option>
+                </select>
+
+                <button type="submit">Register Now</button>
+
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Serverless Event Registration System</p>
+        <p>Created using HTML and CSS</p>
+    </footer>
+
+</body>
+</html>
